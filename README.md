@@ -3,4 +3,4 @@
  </p>
 
 # pon-bot (Procrastinate or not)
-A discord bot to combat procrastination. Made with C++ using DPP library.
+A discord bot made to combat procrastination. Made with C++ using DPP library.

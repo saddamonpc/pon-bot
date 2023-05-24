@@ -30,6 +30,7 @@ int main() {
     });
     
     bot.on_ready([&bot](const dpp::ready_t& event) {
+        // Register bot commands
         if (dpp::run_once<struct register_bot_commands>()) {
             bot.global_command_create(dpp::slashcommand("ping", "Ping pong!", bot.me.id));
             bot.global_command_create(dpp::slashcommand("procrastinate", "Sends a message about procrastination.", bot.me.id));
@@ -40,6 +41,7 @@ int main() {
     bot.start(dpp::st_wait);
 }
 
+// Function to return a random message from ponMessages.h
 std::string returnMessages() {
     // Sets random seed according to current time
     srand(time(0));
